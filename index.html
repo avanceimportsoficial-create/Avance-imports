@@ -24,6 +24,36 @@
 .shirt-photo img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:850px){.shirt-photo{height:260px}}
 @media(max-width:560px){.shirt-photo{height:205px}.voavoe-brand-logo{width:180px}}
+/* AJUSTES DE PROPORÇÃO DAS IMAGENS */
+
+/* Banner principal */
+@media(max-width:850px){
+  .hero-art{
+    min-height:0;
+    aspect-ratio:16 / 9;
+  }
+
+  .hero-img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+  }
+}
+
+/* Logo VOAVOE na categoria */
+.category:nth-child(3) img{
+  position:absolute;
+  right:0;
+  top:0;
+  width:70%;
+  height:100%;
+  object-fit:contain;
+  padding:18px;
+  opacity:.55;
+  mix-blend-mode:screen;
+}
+
 </style>
 </head>
 <body>
