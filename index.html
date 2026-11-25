@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090b09">
-<meta name="description" content="AVANCE IMPORTS — Avance no seu estilo.">
-<title>AVANCE IMPORTS — Avance no seu estilo</title>
+<meta name="description" content="AVANCE IMPORTS — VOAVOE">
+<title>AVANCE IMPORTS — VOAVOE</title>
 
 <style>
 :root{
@@ -13,30 +13,23 @@
   --panel:#121712;
   --text:#f4f5f1;
   --muted:#a9afa5;
-  --line:rgba(255,255,255,.12);
+  --line:rgba(255,255,255,.14);
   --lime:#d3ff01;
   --max:1220px
 }
 
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
 body{
   margin:0;
   background:var(--bg);
   color:var(--text);
   font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif
 }
-
+img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-button{font:inherit}
-img{max-width:100%}
-
-.wrap{
-  width:min(var(--max),calc(100% - 40px));
-  margin:auto
-}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
 
 .topline{
   background:var(--lime);
@@ -52,37 +45,41 @@ header{
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(9,11,9,.94);
+  background:rgba(9,11,9,.96);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line)
 }
 
 .nav{
-  height:78px;
+  min-height:78px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px
 }
 
-.brand img{
-  width:155px;
-  max-height:48px;
-  object-fit:contain
-}
+.brand img{width:155px;max-height:48px;object-fit:contain}
 
 .links{
   display:flex;
   gap:28px;
   font-size:13px;
-  color:#d5dbd1;
-  font-weight:650
+  font-weight:700;
+  color:#d5dbd1
 }
 
 .links a:hover{color:var(--lime)}
 
-.btn,
-.nav-cta{
+.menu-btn{
+  display:none;
+  background:none;
+  color:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px 13px
+}
+
+.btn,.nav-cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -94,14 +91,7 @@ header{
   font-size:11px;
   font-weight:900;
   letter-spacing:.08em;
-  text-transform:uppercase;
-  transition:.2s
-}
-
-.btn:hover,
-.nav-cta:hover{
-  transform:translateY(-2px);
-  background:#dcff9b
+  text-transform:uppercase
 }
 
 .btn-outline{
@@ -115,32 +105,21 @@ header{
   text-transform:uppercase
 }
 
-.menu-btn{
-  display:none;
-  background:none;
-  color:#fff;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:10px 13px
-}
-
 .hero{
-  padding:82px 0 72px;
+  padding:80px 0 70px;
   background:
     radial-gradient(ellipse at 80% 45%,rgba(199,243,106,.14),transparent 34%),
-    linear-gradient(120deg,#090b09,#111810 60%,#090b09);
-  overflow:hidden
+    linear-gradient(120deg,#090b09,#111810 60%,#090b09)
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
+  grid-template-columns:1fr 1fr;
   align-items:center;
-  gap:48px
+  gap:45px
 }
 
-.eyebrow,
-.kicker{
+.eyebrow,.kicker{
   color:var(--lime);
   font-size:10px;
   font-weight:900;
@@ -166,10 +145,7 @@ h1{
   font-weight:950
 }
 
-h1 em{
-  font-style:normal;
-  color:var(--lime)
-}
+h1 em{color:var(--lime);font-style:normal}
 
 .hero-copy{
   max-width:490px;
@@ -180,39 +156,30 @@ h1 em{
 
 .hero-actions{
   display:flex;
-  gap:12px;
   flex-wrap:wrap;
+  gap:12px;
   margin-top:30px
 }
 
 .hero-art{
-  min-height:430px;
   position:relative;
-  display:grid;
-  place-items:center
-}
-
-.hero-frame{
-  position:absolute;
-  inset:0;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
   border:1px solid rgba(199,243,106,.24);
   border-radius:28px;
-  background:radial-gradient(circle at 60% 42%,#39432d,#1a2118 42%,#0b0e0b 78%)
+  background:#101610
 }
 
 .hero-img{
-  position:relative;
-  z-index:1;
   width:100%;
-  height:430px;
+  height:100%;
   object-fit:contain;
-  object-position:center;
-  filter:drop-shadow(0 28px 28px #0008)
+  object-position:center
 }
 
 .hero-note{
   position:absolute;
-  z-index:2;
   bottom:18px;
   left:18px;
   background:var(--lime);
@@ -242,7 +209,6 @@ h1 em{
 }
 
 .ticker b{color:var(--lime)}
-
 section{padding:78px 0}
 
 .section-head{
@@ -262,30 +228,29 @@ h2{
 }
 
 .section-head p{
-  max-width:380px;
+  max-width:420px;
   color:var(--muted);
-  font-size:12px;
+  font-size:13px;
   line-height:1.7;
   margin:0
 }
 
-.promo-grid,
-.categories{
+.promo-grid,.categories{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:15px
 }
 
-.promo{
-  min-height:215px;
-  padding:25px;
+.promo,.jacket,.product-card{
   border:1px solid var(--line);
   border-radius:21px;
-  background:linear-gradient(145deg,#1a2117,#0d100d)
+  background:#121712;
+  padding:20px
 }
 
-.promo .tag,
-.category-info small{
+.promo{min-height:215px}
+
+.promo .tag{
   color:var(--lime);
   font-size:9px;
   font-weight:900;
@@ -293,11 +258,7 @@ h2{
   text-transform:uppercase
 }
 
-.promo h3{
-  font-size:24px;
-  letter-spacing:-.04em;
-  margin:20px 0 9px
-}
+.promo h3{font-size:24px;margin:20px 0 9px}
 
 .price-line{
   display:flex;
@@ -313,14 +274,12 @@ h2{
 }
 
 .new{
-  font-size:28px;
-  font-weight:950;
   color:var(--lime);
-  letter-spacing:-.04em
+  font-size:28px;
+  font-weight:950
 }
 
-.promo p,
-.perfume p{
+.promo p,.product-card p{
   color:#aeb7a7;
   font-size:11px;
   line-height:1.6
@@ -332,23 +291,14 @@ h2{
   overflow:hidden;
   border:1px solid var(--line);
   border-radius:21px;
-  background:radial-gradient(circle at 50% 35%,#3b4734,#151b14 68%,#0b0e0b)
-}
-
-.category:nth-child(2){
-  background:radial-gradient(circle at 50% 35%,#4b4c47,#1b1d1a 68%,#0b0e0b)
-}
-
-.category:nth-child(3){
-  background:radial-gradient(circle at 50% 35%,#3b352e,#191613 68%,#0b0e0b)
+  background:#151b14
 }
 
 .category img{
   width:100%;
   height:100%;
   object-fit:cover;
-  opacity:.78;
-  mix-blend-mode:screen
+  opacity:.76
 }
 
 .category:nth-child(3) img{
@@ -363,15 +313,16 @@ h2{
   bottom:20px
 }
 
-.category-info h3{
-  font-size:28px;
-  margin:8px 0
+.category-info small{
+  color:var(--lime);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.17em;
+  text-transform:uppercase
 }
 
-.category-info span{
-  font-size:11px;
-  color:#c3c9be
-}
+.category-info h3{font-size:28px;margin:8px 0}
+.category-info span{font-size:11px;color:#c3c9be}
 
 .voavoe{
   background:linear-gradient(135deg,#151a14,#090b09 65%);
@@ -385,21 +336,11 @@ h2{
   align-items:center
 }
 
-.voa-intro h2{
-  font-size:clamp(38px,5vw,62px)
-}
-
+.voa-intro h2{font-size:clamp(38px,5vw,62px)}
 .voa-intro h2 span{color:var(--lime)}
-
-.voa-intro p{
-  color:#b5beb0;
-  line-height:1.75;
-  font-size:13px;
-  max-width:420px
-}
+.voa-intro p{max-width:420px;color:#b5beb0;line-height:1.75;font-size:13px}
 
 .voavoe-brand-logo{
-  display:block;
   width:min(220px,70%);
   max-height:100px;
   object-fit:contain;
@@ -416,46 +357,35 @@ h2{
   font-size:9px;
   font-weight:900;
   letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-top:10px
+  text-transform:uppercase
 }
 
-.shirt-card,
-.jacket,
-.perfume{
+.shirt-photo,.campaign-photo{
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  border-radius:15px;
+  background:#050505
+}
+
+.shirt-photo img,.campaign-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain
+}
+
+.shirt-card{
   border:1px solid var(--line);
-  border-radius:21px;
-  background:#121712;
+  border-radius:24px;
+  background:#111510;
   padding:18px
 }
 
-.shirt-photo{
-  height:310px;
-  border-radius:15px;
-  overflow:hidden;
-  background:#20251e;
-  display:grid;
-  place-items:center
-}
-
-.shirt-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block
-}
-
-.color-tabs,
-.jacket-colors{
+.color-tabs,.jacket-colors{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
   margin:16px 0
-}
-
-.color-tab,
-.swatch{
-  cursor:pointer
 }
 
 .color-tab{
@@ -482,35 +412,40 @@ h2{
   flex-wrap:wrap
 }
 
-.shirt-bottom strong{
-  font-size:29px;
-  color:var(--lime)
-}
+.shirt-bottom strong{color:var(--lime);font-size:29px}
+.shirt-bottom small{display:block;color:#9fa99a;font-size:10px}
 
-.shirt-bottom small{
-  display:block;
-  color:#9fa99a;
-  font-size:10px;
-  margin-top:3px
-}
-
-.jackets{
+.campaign-grid,.products-grid{
   display:grid;
-  grid-template-columns:1fr;
-  gap:17px
+  grid-template-columns:repeat(2,1fr);
+  gap:18px
 }
 
-.jacket-feature{
-  max-width:650px
+.campaign-card,.product-card{
+  overflow:hidden
 }
+
+.campaign-card img,.product-card img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:contain;
+  background:#050505;
+  border-radius:14px
+}
+
+.campaign-card h3,.product-card h3{
+  font-size:20px;
+  margin:17px 0 8px
+}
+
+.jacket-feature{max-width:650px}
 
 .jacket-image{
-  height:380px;
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
   border-radius:14px;
-  background:linear-gradient(145deg,#262c24,#0d100d);
-  display:grid;
-  place-items:center;
-  overflow:hidden
+  background:#101410
 }
 
 .jacket-image img{
@@ -519,10 +454,7 @@ h2{
   object-fit:contain
 }
 
-.jacket h3{
-  font-size:19px;
-  margin:17px 0 8px
-}
+.jacket h3{font-size:19px;margin:17px 0 8px}
 
 .swatch{
   width:25px;
@@ -541,21 +473,7 @@ h2{
 .green{background:#24432e}
 .gray{background:#aeb3b4}
 
-.muted{
-  color:#9fa99a;
-  font-size:10px
-}
-
-.catalog-note{
-  border:1px solid #c7f36a33;
-  background:#c7f36a0d;
-  border-radius:14px;
-  padding:16px;
-  color:#c5cebd;
-  font-size:11px;
-  line-height:1.7;
-  margin-top:18px
-}
+.muted{color:#9fa99a;font-size:10px}
 
 .perfumes{
   display:grid;
@@ -564,38 +482,28 @@ h2{
 }
 
 .perfume{
-  border-radius:17px
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#121712;
+  padding:18px
 }
 
 .bottle{
-  height:145px;
+  width:100%;
+  aspect-ratio:1/1;
   overflow:hidden;
   border-radius:10px;
-  background:#0b0e0b;
-  display:grid;
-  place-items:center
+  background:#0b0e0b
 }
 
 .bottle img{
   width:100%;
   height:100%;
-  max-height:160px;
-  object-fit:contain;
-  border-radius:10px
+  object-fit:contain
 }
 
-.perfume h3{
-  font-size:14px;
-  margin:12px 0 5px
-}
-
-.perfume a{
-  font-size:9px;
-  color:var(--lime);
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase
-}
+.perfume h3{font-size:14px;margin:12px 0 5px}
+.perfume a{color:var(--lime);font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
 
 .contact{
   background:var(--lime);
@@ -610,22 +518,9 @@ h2{
   gap:25px
 }
 
-.contact h2{
-  font-size:clamp(34px,5vw,56px);
-  max-width:650px
-}
-
-.contact p{
-  font-size:12px;
-  line-height:1.6;
-  max-width:440px
-}
-
-.contact .btn{
-  background:#10140b;
-  color:var(--lime);
-  border-color:#10140b
-}
+.contact h2{max-width:650px;font-size:clamp(34px,5vw,56px)}
+.contact p{max-width:440px;font-size:12px;line-height:1.6}
+.contact .btn{background:#10140b;color:var(--lime);border-color:#10140b}
 
 footer{
   padding:30px 0;
@@ -639,12 +534,6 @@ footer{
   align-items:center;
   gap:15px;
   flex-wrap:wrap
-}
-
-.notice{
-  font-size:9px;
-  color:#7f887b;
-  margin-top:9px
 }
 
 @media(max-width:850px){
@@ -664,46 +553,27 @@ footer{
   .menu-btn{display:block}
   .nav-cta{display:none}
   .hero{padding:55px 0}
-  .hero-grid,
-  .voa-grid{grid-template-columns:1fr;gap:25px}
-  .hero-art{min-height:340px}
-  .hero-img{height:340px}
-  .promo-grid,
-  .categories{grid-template-columns:1fr}
+  .hero-grid,.voa-grid{grid-template-columns:1fr;gap:25px}
+  .promo-grid,.categories{grid-template-columns:1fr}
   .category{height:240px}
+  .campaign-grid,.products-grid{grid-template-columns:1fr}
   .perfumes{grid-template-columns:1fr 1fr}
-  .contact-grid{
-    align-items:flex-start;
-    flex-direction:column
-  }
-  .jacket-feature{max-width:none}
-  .jacket-image{height:300px}
-  .shirt-photo{height:260px}
+  .contact-grid{align-items:flex-start;flex-direction:column}
 }
 
 @media(max-width:560px){
   .wrap{width:calc(100% - 28px)}
-  .nav{height:68px}
+  .nav{min-height:68px}
   .links{top:68px}
   .brand img{width:135px}
-  .hero-art{min-height:290px}
-  .hero-img{height:290px}
-  .section-head{
-    display:block
-  }
+  .hero-art{aspect-ratio:4/3}
+  .section-head{display:block}
   .section-head p{margin-top:13px}
   section{padding:60px 0}
-  .shirt-photo{height:205px}
   .shirt-card{padding:12px}
-  .shirt-bottom{
-    align-items:flex-start;
-    flex-direction:column
-  }
-  .jacket-image{height:235px}
-  .ticker-inner{justify-content:flex-start}
+  .shirt-bottom{align-items:flex-start;flex-direction:column}
   .perfumes{grid-template-columns:1fr 1fr}
   .perfume{padding:13px}
-  .bottle{height:110px}
 }
 </style>
 </head>
@@ -716,20 +586,23 @@ footer{
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio" aria-label="AVANCE IMPORTS - início">
-      <img src="assets/avance-logo.png.PNG" alt="Logo oficial AVANCE IMPORTS">
+    <a class="brand" href="#inicio">
+      <img src="assets/avance-logo.png.PNG" alt="Logo AVANCE IMPORTS">
     </a>
 
     <nav class="links" id="navLinks">
       <a href="#colecoes">Coleções</a>
       <a href="#voavoe">VOAVOE</a>
-      <a href="#jaquetas">Jaquetas</a>
-      <a href="#perfumes">Perfumes</a>
+      <a href="#campanha">Campanha</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
     </nav>
 
-    <a class="nav-cta" href="#contato">Fale com a gente ↗</a>
+    <a class="nav-cta whatsapp-link" href="#">
+      Fale com a gente ↗
+    </a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
       ☰
     </button>
   </div>
@@ -749,22 +622,21 @@ footer{
 
       <p class="hero-copy">
         Curadoria de moda, calçados e fragrâncias para quem escolhe se destacar.
-        Descubra novidades, encontre seu estilo e aproveite condições especiais de Black Friday.
+        Descubra novidades, encontre seu estilo e aproveite condições especiais.
       </p>
 
       <div class="hero-actions">
-        <a class="btn" href="#colecoes">Explorar coleções ↗</a>
-        <a class="btn-outline" href="#voavoe">Conheça VOAVOE</a>
+        <a class="btn" href="#produtos">Ver produtos ↗</a>
+        <a class="btn-outline" href="#voavoe">Conheça a VOAVOE</a>
       </div>
     </div>
 
     <div class="hero-art">
-      <div class="hero-frame"></div>
       <img
         class="hero-img"
         src="assets/campanha-emanuela.webp"
-        alt="Imagem de campanha AVANCE IMPORTS">
-      <div class="hero-note">Novidades selecionadas · Black Friday</div>
+        alt="Modelo Emanuela em campanha AVANCE IMPORTS">
+      <div class="hero-note">Novidades selecionadas · VOAVOE</div>
     </div>
   </div>
 </section>
@@ -773,59 +645,12 @@ footer{
   <div class="wrap ticker-inner">
     <span><b>AVANCE</b> NO SEU ESTILO</span>
     <span>✳ NOVAS COLEÇÕES</span>
-    <span><b>BLACK FRIDAY</b></span>
-    <span>✳ PRÉ-VENDA VOAVOE</span>
+    <span><b>VOAVOE</b></span>
+    <span>✳ PRÉ-VENDA</span>
   </div>
 </div>
 
-<section id="ofertas">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Condições especiais</div>
-        <h2>Black Friday AVANCE</h2>
-      </div>
-
-      <p>
-        Escolha seus favoritos e consulte disponibilidade, tamanhos e condições
-        diretamente pelo WhatsApp.
-      </p>
-    </div>
-
-    <div class="promo-grid">
-      <article class="promo">
-        <span class="tag">Lançamento · Pré-venda</span>
-        <h3>VOAVOE Oversize</h3>
-        <div class="price-line">
-          <span class="old">R$ 139,90</span>
-          <strong class="new">R$ 89,90</strong>
-        </div>
-        <p>Estoque limitado. Garanta a sua na pré-venda.</p>
-      </article>
-
-      <article class="promo">
-        <span class="tag">Black Friday</span>
-        <h3>Jaquetas selecionadas</h3>
-        <div class="price-line">
-          <span class="old">R$ 249,90</span>
-          <strong class="new">R$ 199,90</strong>
-        </div>
-        <p>Consulte as cores disponíveis e escolha a sua.</p>
-      </article>
-
-      <article class="promo">
-        <span class="tag">Seleção AVANCE</span>
-        <h3>Perfumes e calçados</h3>
-        <div class="price-line">
-          <strong class="new" style="font-size:22px">Consulte valores</strong>
-        </div>
-        <p>Preços e disponibilidade atualizados diretamente pelo WhatsApp.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="colecoes" style="padding-top:18px">
+<section id="colecoes">
   <div class="wrap">
     <div class="section-head">
       <div>
@@ -834,13 +659,13 @@ footer{
       </div>
 
       <p>
-        Uma seleção para completar seu visual, com novidades chegando ao catálogo.
+        Moda, jaquetas, camisetas e fragrâncias selecionadas para você.
       </p>
     </div>
 
     <div class="categories">
       <a class="category" href="#perfumes">
-        <img src="assets/perfume-afnan.jpg" alt="Perfumes AVANCE IMPORTS">
+        <img src="assets/perfume-afnan.jpg" alt="Perfumes">
         <div class="category-info">
           <small>Fragrâncias</small>
           <h3>Perfumes</h3>
@@ -849,20 +674,20 @@ footer{
       </a>
 
       <a class="category" href="#jaquetas">
-        <img src="assets/Jaqueta 1.jpg" alt="Produtos selecionados AVANCE IMPORTS">
+        <img src="assets/jaqueta-verde.webp" alt="Jaquetas">
         <div class="category-info">
           <small>Street & casual</small>
-          <h3>Moda</h3>
+          <h3>Jaquetas</h3>
           <span>Conforto e presença.</span>
         </div>
       </a>
 
       <a class="category" href="#voavoe">
-        <img src="assets/voavoe-logo.png" alt="Logo VOAVOE">
+        <img src="assets/voavoe-preta.png" alt="VOAVOE">
         <div class="category-info">
           <small>Modelagem ampla</small>
-          <h3>Camisetas oversize</h3>
-          <span>Conheça a VOAVOE.</span>
+          <h3>VOAVOE</h3>
+          <span>Conheça a coleção.</span>
         </div>
       </a>
     </div>
@@ -881,48 +706,118 @@ footer{
 
       <img
         class="voavoe-brand-logo"
-        src="assets/voavoe-logo.png"
-        alt="Logotipo oficial VOAVOE">
+        src="assets/voavoe-preta.png"
+        alt="Logo oficial VOAVOE">
 
       <p>
-        Uma nova identidade, uma nova atitude. Camisetas oversize unissex com
-        visual marcante, pensadas para quem tem personalidade e avança no próprio estilo.
+        Uma nova identidade, uma nova atitude. A VOAVOE nasce para quem transforma
+        presença em estilo e escolhe avançar com personalidade.
       </p>
 
       <div class="limited">● Pré-venda · Estoque limitado</div>
     </div>
 
     <div class="shirt-card">
-      <div class="shirt-photo" id="shirtFront">
+      <div class="shirt-photo">
         <img
-          src="assets/voavoe-terracota.jpg"
-          alt="Camiseta VOAVOE terracota">
+          id="shirtProductImage"
+          src="assets/voavoe-camisetas-coloridas.png"
+          alt="Camisetas VOAVOE coloridas">
       </div>
 
-      <div class="color-tabs" role="group" aria-label="Selecione a cor da camiseta VOAVOE">
-        <button class="color-tab" data-color="terracota" aria-pressed="true">
-          Terracota
+      <div class="color-tabs">
+        <button class="color-tab" data-image="assets/voavoe-camisetas-coloridas.png" aria-pressed="true">
+          Coloridas
         </button>
 
-        <button class="color-tab" data-color="laranja" aria-pressed="false">
-          Laranja
-        </button>
-
-        <button class="color-tab" data-color="preta" aria-pressed="false">
-          Preta
+        <button class="color-tab" data-image="assets/voavoe-camisetas-pretas.png" aria-pressed="false">
+          Pretas
         </button>
       </div>
 
       <div class="shirt-bottom">
         <div>
           <strong>R$ 89,90</strong>
-          <small><s>R$ 139,90</s> · valor especial de Black Friday</small>
+          <small>Consulte tamanhos e disponibilidade</small>
         </div>
 
-        <a class="btn whatsapp-link" href="#contato">
+        <a class="btn whatsapp-link" href="#">
           Reservar na pré-venda ↗
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="campanha">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Identidade e inspiração</div>
+        <h2>O universo VOAVOE</h2>
+      </div>
+
+      <p>
+        Imagens ilustrativas criadas para apresentar a atmosfera, a atitude e o
+        posicionamento da nova marca.
+      </p>
+    </div>
+
+    <div class="campaign-grid">
+      <article class="campaign-card">
+        <img src="assets/voavoe-neve-frontal.png" alt="Campanha VOAVOE na neve">
+        <h3>Estilo que acompanha você</h3>
+        <p>Uma identidade criada para diferentes lugares, momentos e personalidades.</p>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/voavoe-neve-lateral.png" alt="Campanha VOAVOE na neve">
+        <h3>Presença em qualquer cenário</h3>
+        <p>Visual marcante, atitude e conforto em uma nova experiência de moda.</p>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/voavoe-look-branco.png" alt="Look VOAVOE branco">
+        <h3>Personalidade e elegância</h3>
+        <p>A VOAVOE combina força visual com uma estética contemporânea.</p>
+      </article>
+
+      <article class="campaign-card">
+        <img src="assets/voavoe-look-preto.png" alt="Look VOAVOE preto">
+        <h3>Uma nova atitude</h3>
+        <p>Peças pensadas para quem quer se destacar sem abrir mão da autenticidade.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Produtos disponíveis</div>
+        <h2>Camisetas VOAVOE</h2>
+      </div>
+
+      <p>
+        Os produtos abaixo são destinados à venda. Consulte tamanhos, valores e disponibilidade pelo WhatsApp.
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <article class="product-card">
+        <img src="assets/voavoe-camisetas-coloridas.png" alt="Camisetas VOAVOE coloridas">
+        <h3>Camisetas coloridas</h3>
+        <p>Modelagem oversize, visual marcante e identidade VOAVOE.</p>
+        <a class="btn whatsapp-link" href="#">Consultar este produto ↗</a>
+      </article>
+
+      <article class="product-card">
+        <img src="assets/voavoe-camisetas-pretas.png" alt="Camisetas VOAVOE pretas">
+        <h3>Camisetas pretas</h3>
+        <p>Peças pretas com estampas exclusivas e presença visual.</p>
+        <a class="btn whatsapp-link" href="#">Consultar este produto ↗</a>
+      </article>
     </div>
   </div>
 </section>
@@ -936,69 +831,45 @@ footer{
       </div>
 
       <p>
-        Escolha a cor da sua jaqueta puffer e consulte tamanhos e disponibilidade.
+        Escolha a cor da sua jaqueta e consulte tamanhos e disponibilidade.
       </p>
     </div>
 
-    <div class="jackets">
-      <article class="jacket jacket-feature">
-        <div class="jacket-image">
-          <img
-            id="jacketProductImage"
-            src="assets/jaqueta-preta.jpg"
-            alt="Jaqueta puffer preta">
-        </div>
+    <article class="jacket jacket-feature">
+      <div class="jacket-image">
+        <img
+          id="jacketProductImage"
+          src="assets/jaqueta-verde.webp"
+          alt="Jaqueta puffer preta">
+      </div>
 
-        <h3>Jaqueta Puffer</h3>
+      <h3>Jaqueta Puffer</h3>
 
-        <div class="price-line">
-          <span class="old">R$ 249,90</span>
-          <strong class="new">R$ 199,90</strong>
-        </div>
+      <div class="price-line">
+        <span class="old">R$ 249,90</span>
+        <strong class="new">R$ 199,90</strong>
+      </div>
 
-        <div class="jacket-colors" role="group" aria-label="Selecione a cor da jaqueta">
-          <button
-            class="swatch black"
-            data-color="preta"
-            aria-label="Preta"
-            aria-pressed="true">
-          </button>
+      <div class="jacket-colors">
+        <button class="swatch black" data-color="preta" aria-label="Preta" aria-pressed="true"></button>
+        <button class="swatch green" data-color="verde" aria-label="Verde" aria-pressed="false"></button>
+        <button class="swatch gray" data-color="cinza" aria-label="Cinza" aria-pressed="false"></button>
+      </div>
 
-          <button
-            class="swatch green"
-            data-color="verde"
-            aria-label="Verde"
-            aria-pressed="false">
-          </button>
+      <div class="muted" id="jacketLabel">
+        Cor selecionada: Preta
+      </div>
 
-          <button
-            class="swatch gray"
-            data-color="cinza"
-            aria-label="Cinza"
-            aria-pressed="false">
-          </button>
-        </div>
-
-        <div class="muted" id="jacketLabelOne">
-          Cor selecionada: Preta
-        </div>
-
-        <p>
-          <a class="btn whatsapp-link" href="#contato">
-            Consultar tamanho e disponibilidade
-          </a>
-        </p>
-      </article>
-    </div>
-
-    <div class="catalog-note">
-      Black Friday: de R$ 249,90 por R$ 199,90. Consulte pelo WhatsApp os tamanhos
-      e a disponibilidade de cada cor.
-    </div>
+      <p>
+        <a class="btn whatsapp-link" href="#">
+          Consultar tamanho e disponibilidade
+        </a>
+      </p>
+    </article>
   </div>
 </section>
 
-<section id="perfumes" style="padding-top:22px">
+<section id="perfumes">
   <div class="wrap">
     <div class="section-head">
       <div>
@@ -1006,46 +877,44 @@ footer{
         <h2>Perfumes</h2>
       </div>
 
-      <p>
-        Fale com a equipe para confirmar valores e disponibilidade.
-      </p>
+      <p>Consulte valores e disponibilidade pelo WhatsApp.</p>
     </div>
 
     <div class="perfumes">
       <article class="perfume">
         <div class="bottle">
-          <img src="assets/perfume-khamrah.jpg" alt="Perfume Lattafa Khamrah">
+          <img src="assets/perfume-khamrah.jpg" alt="Lattafa Khamrah">
         </div>
         <h3>Lattafa Khamrah</h3>
         <p>Consulte valor e disponibilidade.</p>
-        <a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a>
+        <a class="whatsapp-link" href="#">Consultar no WhatsApp ↗</a>
       </article>
 
       <article class="perfume">
         <div class="bottle">
-          <img src="assets/perfume-afnan.jpg" alt="Linha de perfumes Afnan">
+          <img src="assets/perfume-afnan.jpg" alt="Linha Afnan">
         </div>
         <h3>Linha Afnan</h3>
         <p>Consulte as versões disponíveis.</p>
-        <a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a>
+        <a class="whatsapp-link" href="#">Consultar no WhatsApp ↗</a>
       </article>
 
       <article class="perfume">
         <div class="bottle">
-          <img src="assets/perfume-asad-elixir.jpg" alt="Perfume Lattafa Asad Elixir">
+          <img src="assets/perfume-asad-elixir.jpg" alt="Lattafa Asad Elixir">
         </div>
         <h3>Lattafa Asad Elixir</h3>
         <p>Consulte valor e disponibilidade.</p>
-        <a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a>
+        <a class="whatsapp-link" href="#">Consultar no WhatsApp ↗</a>
       </article>
 
       <article class="perfume">
         <div class="bottle">
-          <img src="assets/Asad bourbon 1.JPG" alt="Perfume Lattafa Asad Bourbon">
+          <img src="assets/Asad bourbon 1.JPG" alt="Lattafa Asad Bourbon">
         </div>
         <h3>Lattafa Asad Bourbon</h3>
         <p>Consulte valor e disponibilidade.</p>
-        <a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a>
+        <a class="whatsapp-link" href="#">Consultar no WhatsApp ↗</a>
       </article>
     </div>
   </div>
@@ -1057,13 +926,12 @@ footer{
       <div class="kicker" style="color:#26351a">Atendimento AVANCE</div>
       <h2>Seu próximo estilo começa aqui.</h2>
       <p>
-        Fale com a nossa equipe para consultar valores, tamanhos, cores e
-        disponibilidade dos produtos.
+        Fale com nossa equipe para consultar produtos, tamanhos, cores, valores e pré-vendas.
       </p>
     </div>
 
-    <a class="btn whatsapp-link" href="#contato">
-      Entrar em contato ↗
+    <a class="btn whatsapp-link" href="#">
+      Falar pelo WhatsApp ↗
     </a>
   </div>
 </section>
@@ -1074,94 +942,82 @@ footer{
   <div class="wrap footer-inner">
     <img
       src="assets/avance-logo.png.PNG"
-      alt="Logo oficial AVANCE IMPORTS"
+      alt="Logo AVANCE IMPORTS"
       style="width:150px;max-height:44px;object-fit:contain">
 
     <div>AVANCE NO SEU ESTILO.</div>
     <div>© <span id="year"></span> AVANCE IMPORTS</div>
   </div>
-
-  <div class="wrap notice">
-    Catálogo inicial AVANCE IMPORTS. Valores, tamanhos e estoque devem ser confirmados pelo WhatsApp.
-  </div>
 </footer>
 
 <script>
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "5511940872423";
 
 const whatsappMessage =
-  "Olá! Vim pelo site da AVANCE IMPORTS e gostaria de consultar os produtos.";
+  "Olá! Vim pelo site da AVANCE IMPORTS e gostaria de conhecer a VOAVOE, consultar os produtos disponíveis e saber mais sobre a pré-venda.";
 
 document.querySelectorAll(".whatsapp-link").forEach(link => {
   link.addEventListener("click", event => {
-    if (!WHATSAPP_NUMBER) {
-      event.preventDefault();
-      alert("O WhatsApp comercial será conectado quando o número da AVANCE IMPORTS for informado.");
-      return;
-    }
-
     event.preventDefault();
 
-    window.open(
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`,
-      "_blank",
-      "noopener"
-    );
+    const url =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(url,"_blank","noopener,noreferrer");
   });
 });
 
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click",() => {
   const open = navLinks.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-expanded",String(open));
 });
 
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click",() => {
     navLinks.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-expanded","false");
   });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const shirtFiles = {
-  terracota: "assets/voavoe-terracota.jpg",
-  laranja: "assets/voavoe-laranja.png",
-  preta: "assets/voavoe-preta.png"
-};
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
 document.querySelectorAll(".color-tab").forEach(button => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click",() => {
     document.querySelectorAll(".color-tab").forEach(item => {
-      item.setAttribute("aria-pressed", "false");
+      item.setAttribute("aria-pressed","false");
     });
 
-    button.setAttribute("aria-pressed", "true");
+    button.setAttribute("aria-pressed","true");
 
-    const color = button.dataset.color;
-    const image = document.querySelector("#shirtFront img");
-
-    image.src = shirtFiles[color];
-    image.alt = `Camiseta VOAVOE ${color}`;
+    document.getElementById("shirtProductImage").src =
+      button.dataset.image;
   });
 });
 
+/*
+  Nomes atuais das jaquetas:
+  jaqueta-verde.webp = imagem preta
+  jaqueta-cinza.webp = imagem verde
+  jaqueta-preta.jpg  = imagem cinza
+*/
+
 const jacketFiles = {
-  preta: "assets/jaqueta-preta.jpg",
-  verde: "assets/jaqueta-verde.webp",
-  cinza: "assets/jaqueta-cinza.webp"
+  preta:"assets/jaqueta-verde.webp",
+  verde:"assets/jaqueta-cinza.webp",
+  cinza:"assets/jaqueta-preta.jpg"
 };
 
 document.querySelectorAll(".swatch").forEach(button => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click",() => {
     document.querySelectorAll(".swatch").forEach(item => {
-      item.setAttribute("aria-pressed", "false");
+      item.setAttribute("aria-pressed","false");
     });
 
-    button.setAttribute("aria-pressed", "true");
+    button.setAttribute("aria-pressed","true");
 
     const color = button.dataset.color;
     const image = document.getElementById("jacketProductImage");
@@ -1169,8 +1025,8 @@ document.querySelectorAll(".swatch").forEach(button => {
     image.src = jacketFiles[color];
     image.alt = `Jaqueta puffer ${color}`;
 
-    document.getElementById("jacketLabelOne").textContent =
-      `Cor selecionada: ${color.charAt(0).toUpperCase()}${color.slice(1)}`;
+    document.getElementById("jacketLabel").textContent =
+      `Cor selecionada: ${color.charAt(0).toUpperCase()+color.slice(1)}`;
   });
 });
 </script>
