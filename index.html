@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090b09">
+<meta name="description" content="AVANCE IMPORTS — Avance no seu estilo."><title>AVANCE IMPORTS — Avance no seu estilo</title>
+<style>
+:root{--bg:#090b09;--panel:#121712;--text:#f4f5f1;--muted:#a9afa5;--line:rgba(255,255,255,.12);--lime:#d3ff01;--max:1220px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.topline{background:var(--lime);color:#10140b;text-align:center;padding:10px;font-size:11px;font-weight:900;letter-spacing:.2em}header{position:sticky;top:0;z-index:20;background:rgba(9,11,9,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand img{width:155px;max-height:48px;object-fit:contain}.brand-fallback{font-weight:950;letter-spacing:.12em;font-size:20px}.brand-fallback span{color:var(--lime)}.links{display:flex;gap:28px;font-size:13px;color:#d5dbd1;font-weight:650}.links a:hover{color:var(--lime)}.btn,.nav-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--lime);color:#10140b;border:1px solid var(--lime);padding:14px 20px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;transition:.2s}.btn:hover,.nav-cta:hover{transform:translateY(-2px);background:#dcff9b}.btn-outline{display:inline-flex;padding:14px 20px;border:1px solid #697164;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.menu-btn{display:none;background:none;color:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 13px}.hero{padding:82px 0 72px;background:radial-gradient(ellipse at 80% 45%,rgba(199,243,106,.14),transparent 34%),linear-gradient(120deg,#090b09,#111810 60%,#090b09);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}.eyebrow,.kicker{color:var(--lime);font-size:10px;font-weight:900;letter-spacing:.22em;text-transform:uppercase}.eyebrow:before{content:"";display:inline-block;width:30px;height:1px;background:var(--lime);vertical-align:middle;margin-right:10px}h1{font-size:clamp(46px,7vw,86px);line-height:.94;letter-spacing:-.065em;margin:24px 0;font-weight:950}h1 em{font-style:normal;color:var(--lime)}.hero-copy{max-width:490px;color:#c0c7bc;font-size:15px;line-height:1.8}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero-art{min-height:430px;position:relative;display:grid;place-items:center}.hero-frame{position:absolute;inset:0;border:1px solid rgba(199,243,106,.24);border-radius:28px;background:radial-gradient(circle at 60% 42%,#39432d,#1a2118 42%,#0b0e0b 78%)}.hero-frame:after{content:"AVANCE";position:absolute;right:18px;bottom:12px;color:rgba(255,255,255,.06);font-size:clamp(50px,8vw,100px);font-weight:950;letter-spacing:-.08em}.hero-img{position:relative;z-index:1;width:100%;height:430px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 28px 28px #0008)}.hero-note{position:absolute;z-index:2;bottom:18px;left:18px;background:var(--lime);color:#10140b;padding:12px 15px;border-radius:12px;font-size:10px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}.ticker{border-block:1px solid var(--line);background:#0e120d}.ticker-inner{display:flex;justify-content:space-around;gap:25px;padding:17px 0;white-space:nowrap;font-size:10px;font-weight:900;letter-spacing:.18em}.ticker b{color:var(--lime)}section{padding:78px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}.section-head h2,h2{font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-.05em;margin:12px 0 0;font-weight:930}.section-head p{max-width:380px;color:var(--muted);font-size:12px;line-height:1.7;margin:0}.promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.promo{min-height:215px;padding:25px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,#1a2117,#0d100d)}.promo .tag{color:var(--lime);font-size:9px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.promo h3{font-size:24px;letter-spacing:-.04em;margin:20px 0 9px}.price-line{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.old{color:#8f9789;text-decoration:line-through;font-size:13px}.new{font-size:28px;font-weight:950;color:var(--lime);letter-spacing:-.04em}.promo p{color:#aeb7a7;font-size:11px;line-height:1.6}.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.category{height:280px;position:relative;overflow:hidden;border:1px solid var(--line);border-radius:21px;background:radial-gradient(circle at 50% 35%,#3b4734,#151b14 68%,#0b0e0b)}.category:nth-child(2){background:radial-gradient(circle at 50% 35%,#4b4c47,#1b1d1a 68%,#0b0e0b)}.category:nth-child(3){background:radial-gradient(circle at 50% 35%,#3b352e,#191613 68%,#0b0e0b)}.category img{width:100%;height:100%;object-fit:cover;opacity:.78;mix-blend-mode:screen}.category-info{position:absolute;left:20px;right:20px;bottom:20px}.category-info small{color:var(--lime);font-size:9px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.category-info h3{font-size:28px;margin:8px 0}.category-info span{font-size:11px;color:#c3c9be}.voavoe{background:linear-gradient(135deg,#151a14,#090b09 65%);border-block:1px solid var(--line)}.voa-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.voa-intro h2{font-size:clamp(38px,5vw,62px)}.voa-intro h2 span{color:var(--lime)}.voa-intro p{color:#b5beb0;line-height:1.75;font-size:13px;max-width:420px}.limited{display:inline-block;border:1px solid #c7f36a66;color:var(--lime);padding:10px 13px;border-radius:999px;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-top:10px}.shirt-card{border:1px solid var(--line);border-radius:24px;background:#111510;padding:18px}.shirt-photos{display:grid;grid-template-columns:1fr 1fr;gap:9px}.shirt-photo{height:260px;border-radius:15px;overflow:hidden;background:#20251e;display:grid;place-items:center}.shirt-photo img{width:100%;height:100%;object-fit:cover}.placeholder{color:#a8b09f;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:12px}.color-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.color-tab{border:1px solid var(--line);background:none;color:#d7ddd2;padding:10px 14px;border-radius:999px;font-size:10px;font-weight:800;cursor:pointer}.color-tab[aria-pressed=true]{background:var(--lime);border-color:var(--lime);color:#10140b}.shirt-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.shirt-bottom strong{font-size:29px;color:var(--lime)}.shirt-bottom small{display:block;color:#9fa99a;font-size:10px;margin-top:3px}.jackets{display:grid;grid-template-columns:1fr 1fr;gap:17px}.jacket{border:1px solid var(--line);border-radius:21px;background:#121712;padding:18px}.jacket-image{height:270px;border-radius:14px;background:linear-gradient(145deg,#262c24,#0d100d);display:grid;place-items:center;overflow:hidden}.jacket-image img{width:100%;height:100%;object-fit:contain}.jacket h3{font-size:19px;margin:17px 0 8px}.jacket-colors{display:flex;gap:10px;margin:12px 0}.swatch{width:25px;height:25px;border-radius:50%;border:2px solid #697064;cursor:pointer}.swatch[aria-pressed=true]{outline:2px solid var(--lime);outline-offset:3px;border-color:#fff}.black{background:#171717}.green{background:#24432e}.gray{background:#aeb3b4}.red{background:#8d1724}.muted{color:#9fa99a;font-size:10px}.catalog-note{border:1px solid #c7f36a33;background:#c7f36a0d;border-radius:14px;padding:16px;color:#c5cebd;font-size:11px;line-height:1.7;margin-top:18px}.perfumes{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.perfume{padding:18px;border:1px solid var(--line);border-radius:17px;background:#121712}.bottle{height:110px;display:grid;place-items:center;color:var(--lime);font-size:38px}.perfume h3{font-size:14px;margin:5px 0}.perfume p{font-size:10px;color:#a9b2a3}.perfume a{font-size:9px;color:var(--lime);font-weight:900;letter-spacing:.1em;text-transform:uppercase}.contact{background:var(--lime);color:#10140b;padding:65px 0}.contact-grid{display:flex;align-items:center;justify-content:space-between;gap:25px}.contact h2{font-size:clamp(34px,5vw,56px);max-width:650px}.contact p{font-size:12px;line-height:1.6;max-width:440px}.contact .btn{background:#10140b;color:var(--lime);border-color:#10140b}footer{padding:30px 0;color:#9ba496;font-size:10px}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.footer-brand{color:white;font-weight:950;letter-spacing:.14em}.footer-brand span{color:var(--lime)}.notice{font-size:9px;color:#7f887b;margin-top:9px}
+@media(max-width:850px){.links{display:none;position:absolute;top:78px;left:0;right:0;background:#0d100d;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}.hero{padding:55px 0}.hero-grid{grid-template-columns:1fr;gap:25px}.hero-art{min-height:340px}.hero-img{height:340px}.promo-grid{grid-template-columns:1fr}.categories{grid-template-columns:1fr}.category{height:240px}.voa-grid{grid-template-columns:1fr;gap:25px}.perfumes{grid-template-columns:1fr 1fr}.contact-grid{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.wrap{width:calc(100% - 28px)}.nav{height:68px}.links{top:68px}.brand img{width:135px}.hero-art{min-height:290px}.hero-img{height:290px}.section-head{display:block}.section-head p{margin-top:13px}section{padding:60px 0}.shirt-photo{height:165px}.shirt-card{padding:12px}.shirt-bottom{align-items:flex-start;flex-direction:column}.jackets{grid-template-columns:1fr}.jacket-image{height:235px}.ticker-inner{justify-content:flex-start}.perfumes{grid-template-columns:1fr 1fr}.perfume{padding:13px}.bottle{height:90px}}
+
+.voavoe-logo-panel{height:250px;border-radius:16px;overflow:hidden;background:#050505;display:grid;place-items:center;margin-bottom:18px}
+.voavoe-logo-panel img{width:100%;height:100%;object-fit:contain;padding:16px}
+.bottle img{width:100%;height:100%;max-height:160px;object-fit:contain;border-radius:10px}
+.bottle{height:145px;overflow:hidden;border-radius:10px;background:#0b0e0b}
+.bottle-pending{font-size:42px}
+.jacket-feature{max-width:650px}
+.jacket-image{height:380px}
+.jacket-image img{width:100%;height:100%;object-fit:contain}
+.hero-img{object-fit:contain;object-position:center}
+@media(max-width:850px){.jacket-feature{max-width:none}.jacket-image{height:300px}.voavoe-logo-panel{height:210px}}
+
+.voavoe-brand-logo{display:block;width:min(220px,70%);height:auto;max-height:100px;object-fit:contain;object-position:left center;margin:18px 0}
+.shirt-photo{height:310px}
+.shirt-photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:850px){.shirt-photo{height:260px}}
+@media(max-width:560px){.shirt-photo{height:205px}.voavoe-brand-logo{width:180px}}
+</style>
+</head>
+<body>
+<div class="topline">AVANCE NA BLACKFRIDAY ✦ OFERTAS POR TEMPO LIMITADO</div>
+<header><div class="wrap nav">
+<a class="brand" href="#inicio" aria-label="AVANCE IMPORTS - início"><img src="assets/avance-logo.png" alt="Logo oficial AVANCE IMPORTS"></a>
+<nav class="links" id="navLinks"><a href="#colecoes">Coleções</a><a href="#voavoe">VOAVOE</a><a href="#jaquetas">Jaquetas</a><a href="#perfumes">Perfumes</a></nav><a class="nav-cta" href="#contato">Fale com a gente ↗</a><button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid"><div><div class="eyebrow">Estilo que acompanha você</div><h1>AVANCE NO<br>SEU <em>ESTILO.</em></h1><p class="hero-copy">Curadoria de moda, calçados e fragrâncias para quem escolhe se destacar. Descubra novidades, encontre seu estilo e aproveite condições especiais de Black Friday.</p><div class="hero-actions"><a class="btn" href="#colecoes">Explorar coleções ↗</a><a class="btn-outline" href="#voavoe">Conheça VOAVOE</a></div></div><div class="hero-art"><div class="hero-frame"></div><img class="hero-img" src="assets/campanha-emanuela.webp" alt="Imagem de campanha AVANCE IMPORTS" onerror="this.style.display='none'"><div class="hero-note">Novidades selecionadas · Black Friday</div></div></div></section>
+<div class="ticker"><div class="wrap ticker-inner"><span><b>AVANCE</b> NO SEU ESTILO</span><span>✳ NOVAS COLEÇÕES</span><span><b>BLACK FRIDAY</b></span><span>✳ PRÉ-VENDA VOAVOE</span></div></div>
+<section id="ofertas"><div class="wrap"><div class="section-head"><div><div class="kicker">Condições especiais</div><h2>Black Friday AVANCE</h2></div><p>Escolha seus favoritos e consulte disponibilidade, tamanhos e condições diretamente pelo WhatsApp.</p></div><div class="promo-grid">
+<article class="promo"><span class="tag">Lançamento · Pré-venda</span><h3>VOAVOE Oversize</h3><div class="price-line"><span class="old">R$ 139,90</span><strong class="new">R$ 89,90</strong></div><p>Estoque limitado. Garanta a sua na pré-venda.</p></article>
+<article class="promo"><span class="tag">Black Friday</span><h3>Jaquetas selecionadas</h3><div class="price-line"><span class="old">R$ 249,90</span><strong class="new">R$ 199,90</strong></div><p>Consulte as cores disponíveis e escolha a sua.</p></article>
+<article class="promo"><span class="tag">Seleção AVANCE</span><h3>Perfumes e calçados</h3><div class="price-line"><strong class="new" style="font-size:22px">Consulte valores</strong></div><p>Preços e disponibilidade atualizados diretamente pelo WhatsApp.</p></article>
+</div></div></section>
+<section id="colecoes" style="padding-top:18px"><div class="wrap"><div class="section-head"><div><div class="kicker">Explore a AVANCE</div><h2>Escolha sua categoria</h2></div><p>Uma seleção para completar seu visual, com novidades chegando ao catálogo.</p></div><div class="categories">
+<a class="category" href="#perfumes"><img src="assets/perfume-afnan.jpg" alt="" onerror="this.style.display='none'"><div class="category-info"><small>Fragrâncias</small><h3>Perfumes</h3><span>Encontre sua assinatura.</span></div></a>
+<a class="category" href="#jaquetas"><img src="assets/categoria-calcados.jpg" alt="Calçados selecionados AVANCE IMPORTS"><div class="category-info"><small>Street & casual</small><h3>Calçados</h3><span>Conforto e presença.</span></div></a>
+<a class="category" href="#voavoe"><img src="assets/voavoe-logo.png" alt="" onerror="this.style.display='none'"><div class="category-info"><small>Modelagem ampla</small><h3>Camisetas oversize</h3><span>Conheça a VOAVOE.</span></div></a>
+</div></div></section>
+<section class="voavoe" id="voavoe"><div class="wrap voa-grid">
+<div class="voa-intro"><div class="kicker">Nova marca · Exclusividade AVANCE</div>
+<h2>Apresentamos<br><span>VOAVOE.</span></h2>
+<img class="voavoe-brand-logo" src="assets/voavoe-logo.png" alt="Logotipo oficial VOAVOE">
+<p>Uma nova identidade, uma nova atitude. Camisetas oversize unissex com visual marcante, pensadas para quem tem personalidade e avança no próprio estilo.</p>
+<div class="limited">● Pré-venda · Estoque limitado</div></div>
+<div class="shirt-card">
+<div class="shirt-photo" id="shirtFront"><img src="assets/voavoe-terracota.jpg" alt="Camiseta VOAVOE terracota, frente e costas"></div>
+<div class="color-tabs" role="group" aria-label="Selecione a cor da camiseta VOAVOE">
+<button class="color-tab" data-color="terracota" aria-pressed="true">Terracota</button>
+<button class="color-tab" data-color="laranja" aria-pressed="false">Laranja</button>
+<button class="color-tab" data-color="preta" aria-pressed="false">Preta</button>
+</div>
+<div class="shirt-bottom"><div><strong>R$ 89,90</strong><small><s>R$ 139,90</s> · valor especial de Black Friday</small></div>
+<a class="btn whatsapp-link" href="#contato">Reservar na pré-venda ↗</a></div>
+</div></div></section>
+<section id="jaquetas"><div class="wrap"><div class="section-head">
+<div><div class="kicker">Seleção de inverno</div><h2>Jaquetas em destaque</h2></div>
+<p>Escolha a cor da sua jaqueta puffer. As fotografias enviadas foram aplicadas sem alterar o produto.</p></div>
+<div class="jackets">
+<article class="jacket jacket-feature">
+<div class="jacket-image" id="jacketImageOne"><img id="jacketProductImage" src="assets/jaqueta-preta.webp" alt="Jaqueta puffer preta"></div>
+<h3>Jaqueta Puffer</h3>
+<div class="price-line"><span class="old">R$ 249,90</span><strong class="new">R$ 199,90</strong></div>
+<div class="jacket-colors" role="group" aria-label="Selecione a cor da jaqueta">
+<button class="swatch black" data-jacket="one" data-color="preta" aria-label="Preta" aria-pressed="true"></button>
+<button class="swatch green" data-jacket="one" data-color="verde" aria-label="Verde" aria-pressed="false"></button>
+<button class="swatch gray" data-jacket="one" data-color="cinza" aria-label="Cinza" aria-pressed="false"></button>
+</div>
+<div class="muted" id="jacketLabelOne">Cor selecionada: Preta</div>
+<p><a class="btn whatsapp-link" href="#contato">Consultar tamanho e disponibilidade</a></p>
+</article>
+</div>
+<div class="catalog-note">Black Friday: de R$ 249,90 por R$ 199,90. Consulte pelo WhatsApp os tamanhos e a disponibilidade de cada cor.</div>
+</div></section>
+<section id="perfumes" style="padding-top:22px"><div class="wrap">
+<div class="section-head"><div><div class="kicker">Fragrâncias selecionadas</div><h2>Perfumes</h2></div>
+<p>Os valores dos perfumes são consultados diretamente pelo WhatsApp. Fale com a equipe para confirmar disponibilidade.</p></div>
+<div class="perfumes">
+<article class="perfume"><div class="bottle"><img src="assets/perfume-khamrah.jpg" alt="Perfume Lattafa Khamrah"></div><h3>Lattafa Khamrah</h3><p>Consulte valor e disponibilidade.</p><a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a></article>
+<article class="perfume"><div class="bottle"><img src="assets/perfume-afnan.jpg" alt="Linha de perfumes Afnan"></div><h3>Linha Afnan</h3><p>Consulte as versões disponíveis.</p><a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a></article>
+<article class="perfume"><div class="bottle"><img src="assets/perfume-asad-elixir.jpg" alt="Perfume Lattafa Asad Elixir"></div><h3>Lattafa Asad Elixir</h3><p>Consulte valor e disponibilidade.</p><a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a></article>
+<article class="perfume"><div class="bottle bottle-pending">✧</div><h3>Lattafa Asad Bourbon</h3><p>Foto do produto a adicionar.</p><a class="whatsapp-link" href="#contato">Consultar no WhatsApp ↗</a></article>
+</div></div></section>
+<section class="contact" id="contato"><div class="wrap contact-grid"><div><div class="kicker" style="color:#26351a">Atendimento AVANCE</div><h2>Seu próximo estilo começa aqui.</h2><p>Fale com a nossa equipe para consultar valores, tamanhos, cores e disponibilidade dos produtos.</p></div><a class="btn whatsapp-link" href="#contato">Entrar em contato ↗</a></div></section>
+</main>
+<footer><div class="wrap footer-inner"><img src="assets/avance-logo.png" alt="Logo oficial AVANCE IMPORTS" style="width:150px;max-height:44px;object-fit:contain"><div>AVANCE NO SEU ESTILO.</div><div>© <span id="year"></span> AVANCE IMPORTS</div></div><div class="wrap notice">Catálogo inicial AVANCE IMPORTS. Valores de perfumes, tamanhos e estoque devem ser confirmados pelo WhatsApp.</div></footer>
+<script>
+const WHATSAPP_NUMBER = "";
+const whatsappMessage = "Olá! Vim pelo site da AVANCE IMPORTS e gostaria de consultar os produtos.";
+
+document.querySelectorAll(".whatsapp-link").forEach(link => {
+  link.addEventListener("click", event => {
+    if (!WHATSAPP_NUMBER) {
+      event.preventDefault();
+      alert("O WhatsApp comercial será conectado quando o número da AVANCE IMPORTS for informado.");
+      return;
+    }
+    event.preventDefault();
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`, "_blank", "noopener");
+  });
+});
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+menuBtn.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+});
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const shirtFiles = {
+  terracota: "assets/voavoe-terracota.jpg",
+  laranja: "assets/voavoe-laranja.jpg",
+  preta: "assets/voavoe-preta.jpg"
+};
+document.querySelectorAll(".color-tab").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".color-tab").forEach(item => item.setAttribute("aria-pressed", "false"));
+    button.setAttribute("aria-pressed", "true");
+    const color = button.dataset.color;
+    const img = document.querySelector("#shirtFront img");
+    img.src = shirtFiles[color];
+    img.alt = `Camiseta VOAVOE ${color}, frente e costas`;
+  });
+});
+
+
+const jacketFiles = {
+  preta: "assets/jaqueta-preta.webp",
+  verde: "assets/jaqueta-verde.webp",
+  cinza: "assets/jaqueta-cinza.jpg"
+};
+document.querySelectorAll(".swatch").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".swatch").forEach(item => item.setAttribute("aria-pressed", "false"));
+    button.setAttribute("aria-pressed", "true");
+    const color = button.dataset.color;
+    const img = document.getElementById("jacketProductImage");
+    img.src = jacketFiles[color];
+    img.alt = `Jaqueta puffer ${color}`;
+    document.getElementById("jacketLabelOne").textContent =
+      `Cor selecionada: ${color.charAt(0).toUpperCase()}${color.slice(1)}`;
+  });
+});
+</script>
+</body></html>
