@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b09">
+<meta name="description" content="AVANCE IMPORTS — moda, camisetas VOAVOE, jaquetas e fragrâncias.">
+<title>AVANCE IMPORTS | VOAVOE</title>
+<style>
+:root{
+  --bg:#080b09;--panel:#111711;--panel2:#151d15;--line:#293329;
+  --text:#f4f6f1;--muted:#a8b2a5;--lime:#d7ff00;--lime2:#b9df00;
+  --max:1240px;--radius:22px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,select{font:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.topline{background:var(--lime);color:#11150b;text-align:center;padding:10px 14px;font-size:10px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:20;background:rgba(8,11,9,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{width:168px;height:54px;object-fit:contain}
+.links{display:flex;align-items:center;gap:clamp(14px,2.5vw,30px);font-size:13px;font-weight:800}
+.links a{transition:color .2s}
+.links a:hover{color:var(--lime)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.cart-button,.primary{border:0;background:var(--lime);color:#10140b;border-radius:999px;padding:14px 20px;font-size:11px;font-weight:950;letter-spacing:.08em;cursor:pointer;transition:transform .2s,background .2s}
+.cart-button:hover,.primary:hover{transform:translateY(-2px);background:#e5ff45}
+.menu-button{display:none;background:none;border:1px solid var(--line);color:white;border-radius:50%;width:42px;height:42px;font-size:20px}
+.hero{position:relative;overflow:hidden;padding:76px 0 72px;background:radial-gradient(ellipse at 78% 45%,rgba(105,139,26,.22),transparent 42%),linear-gradient(120deg,#080b09,#0d130d)}
+.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(215,255,0,.12);border-radius:50%;right:-190px;top:-200px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:clamp(32px,6vw,80px)}
+.eyebrow,.kicker{color:var(--lime);font-size:10px;font-weight:950;letter-spacing:.23em;text-transform:uppercase}
+.hero h1{font-size:clamp(52px,7.5vw,94px);line-height:.88;letter-spacing:-.075em;margin:22px 0}
+.hero h1 span{color:var(--lime)}
+.hero p,.intro{color:var(--muted);line-height:1.8;font-size:15px}
+.hero p{max-width:520px;margin:0 0 26px}
+.hero-image{width:100%;aspect-ratio:16/10;object-fit:cover;background:#101510;border:1px solid var(--line);border-radius:26px;box-shadow:0 25px 70px #0008}
+.hero-note{display:flex;align-items:center;gap:12px;margin-top:22px;color:#d6dfd0;font-size:11px;letter-spacing:.08em}
+.hero-note:before{content:"";width:34px;height:1px;background:var(--lime)}
+.section{padding:82px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
+.section h2{font-size:clamp(36px,5vw,62px);line-height:.98;letter-spacing:-.065em;margin:12px 0 16px}
+.intro{max-width:720px;margin:0}
+.brand-story{display:grid;grid-template-columns:.75fr 1.25fr;gap:45px;align-items:center}
+.story-logo{min-height:240px;display:grid;place-items:center;background:linear-gradient(145deg,#111711,#080b09);border:1px solid var(--line);border-radius:var(--radius);padding:35px}
+.story-logo img{width:min(300px,100%);max-height:150px;object-fit:contain}
+.story-copy h2{margin-top:12px}
+.campaign-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.campaign-card{position:relative;overflow:hidden;background:#101510;border:1px solid var(--line);border-radius:20px;min-height:260px}
+.campaign-card img{width:100%;height:clamp(300px,48vw,590px);object-fit:cover;transition:transform .5s}
+.campaign-card:hover img{transform:scale(1.025)}
+.campaign-caption{position:absolute;left:16px;bottom:16px;background:#080b09d9;border:1px solid #ffffff20;border-radius:999px;padding:9px 13px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.product,.jacket{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:22px;padding:17px;min-width:0}
+.product-image{width:100%;height:360px;object-fit:contain;background:#070907;border-radius:15px}
+.product h3{font-size:22px;margin:18px 0 8px}
+.old{color:#879184;text-decoration:line-through;font-size:14px;margin-right:10px}
+.price{color:var(--lime);font-size:30px;font-weight:950;letter-spacing:-.04em}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.chip{border:1px solid #586653;border-radius:999px;padding:7px 11px;font-size:10px;color:#d8e0d2}
+.size{width:100%;padding:13px;border-radius:10px;background:#090d09;border:1px solid #53604f;color:white;margin-top:6px}
+.add{width:100%;margin-top:12px}
+.jackets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.jacket img{width:100%;height:270px;object-fit:contain;background:#090d09;border-radius:14px}
+.jacket h3{margin:14px 0 7px;font-size:18px}
+.jacket .price{font-size:24px}
+.fragrance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.fragrance{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:12px}
+.fragrance img{width:100%;height:220px;object-fit:contain;background:#090d09;border-radius:12px}
+.fragrance h3{font-size:15px;margin:13px 4px 5px}
+.contact{background:var(--lime);color:#11150b;padding:66px 0}
+.contact .kicker{color:#34451a}
+.contact h2{font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.06em;margin:12px 0}
+.contact p{max-width:650px;line-height:1.7}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.contact-links a{background:#11150b;color:var(--lime);padding:14px 19px;border-radius:999px;font-size:11px;font-weight:950;letter-spacing:.05em}
+footer{padding:30px 0;color:var(--muted);font-size:11px;text-align:center;line-height:1.8}
+.cart-panel{display:none;position:fixed;inset:0;background:#000b;z-index:50}
+.cart-panel.open{display:block}
+.cart-box{position:absolute;right:0;top:0;width:min(460px,100%);height:100%;overflow:auto;background:#111711;padding:25px;border-left:1px solid var(--line)}
+.close{float:right;background:none;border:0;color:white;font-size:30px;cursor:pointer}
+.cart-box h2{font-size:32px;letter-spacing:-.05em}
+.cart-item{border-bottom:1px solid var(--line);padding:15px 0;display:flex;justify-content:space-between;gap:12px;line-height:1.6;font-size:13px}
+.remove{background:none;border:0;color:#ff9b9b;cursor:pointer;font-size:12px}
+.checkout{width:100%;margin-top:20px}
+.empty{color:var(--muted);line-height:1.7}
+.note{color:var(--muted);font-size:11px;line-height:1.7;margin-top:18px}
+.mobile-menu{display:none;padding:0 0 18px}
+.mobile-menu a{display:block;padding:12px 0;border-top:1px solid var(--line);font-size:13px;font-weight:800}
+@media(max-width:850px){
+ .links{display:none}.menu-button{display:block}
+ .hero-grid{grid-template-columns:1fr}.hero{padding:56px 0}
+ .hero-image{aspect-ratio:16/9}
+ .brand-story{grid-template-columns:1fr;gap:22px}.story-logo{min-height:180px}
+ .jackets{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .fragrance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+ .wrap{width:min(var(--max),calc(100% - 28px))}
+ nav{min-height:68px}.brand{width:135px;height:46px}
+ .cart-button{padding:12px 14px;font-size:10px}
+ .hero h1{font-size:clamp(52px,15vw,76px)}
+ .section{padding:60px 0}
+ .section-head{display:block}
+ .campaign-grid,.products{grid-template-columns:1fr;gap:13px}
+ .campaign-card img{height:440px}
+ .product-image{height:320px}
+ .jackets{grid-template-columns:1fr}
+ .jacket img{height:290px}
+ .fragrance img{height:175px}
+ .fragrance h3{font-size:13px}
+}
+</style>
+</head>
+<body>
+<div class="topline">BLACK FRIDAY VOAVOE · DE R$ 199,90 POR R$ 89,90 · OFERTA ESPECIAL NO SITE</div>
+<header>
+ <div class="wrap">
+  <nav>
+   <a href="#inicio" aria-label="AVANCE IMPORTS - início"><img class="brand" src="avance-logo.png.PNG" alt="AVANCE IMPORTS"></a>
+   <div class="links">
+    <a href="#voavoe">VOAVOE</a><a href="#produtos">Camisetas</a><a href="#jaquetas">Jaquetas</a><a href="#perfumes">Perfumes</a><a href="#contato">Contato</a>
+   </div>
+   <div class="nav-actions">
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
+    <button class="cart-button" id="openCart">CARRINHO (<span id="cartCount">0</span>)</button>
+   </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+   <a href="#voavoe">VOAVOE</a><a href="#produtos">Camisetas</a><a href="#jaquetas">Jaquetas</a><a href="#perfumes">Perfumes</a><a href="#contato">Contato</a>
+  </div>
+ </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">Estilo que acompanha você</div>
+   <h1>AVANCE NO<br>SEU <span>ESTILO.</span></h1>
+   <p>Moda, calçados e fragrâncias para quem escolhe se destacar. Conheça a VOAVOE, nossa marca exclusiva, e descubra peças que combinam atitude, identidade e personalidade.</p>
+   <a class="primary" href="#produtos">EXPLORAR COLEÇÃO ↗</a>
+   <div class="hero-note">AVANCE IMPORTS · VOAVOE</div>
+  </div>
+  <img class="hero-image" src="campanha-emanuela.webp" alt="Campanha AVANCE IMPORTS">
+ </div>
+</section>
+
+<section class="section" id="voavoe">
+ <div class="wrap brand-story">
+  <div class="story-logo"><img src="voavoe-logo-branca.png" alt="Logo branca VOAVOE"></div>
+  <div class="story-copy">
+   <div class="kicker">Nova marca · Exclusividade AVANCE</div>
+   <h2>Apresentamos VOAVOE.</h2>
+   <p class="intro">Uma nova identidade, uma nova atitude. A VOAVOE nasce para quem transforma presença em estilo e escolhe avançar com personalidade. Vista sua essência em todos os momentos.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="campanha">
+ <div class="wrap">
+  <div class="kicker">Campanha VOAVOE</div>
+  <h2>Uma marca para<br>todos os momentos.</h2>
+  <p class="intro">Conheça a identidade e a inspiração da VOAVOE. Explore os looks da campanha e encontre suas peças favoritas na seção de produtos.</p>
+  <div class="campaign-grid">
+   <article class="campaign-card"><img src="assets/voavoe-neve-frontal.png.PNG" alt="Modelo VOAVOE na neve, vista frontal"><span class="campaign-caption">VOAVOE · Na neve</span></article>
+   <article class="campaign-card"><img src="assets/voavoe-neve-lateral.png.PNG" alt="Modelo VOAVOE na neve, vista lateral"><span class="campaign-caption">VOAVOE · Lifestyle</span></article>
+   <article class="campaign-card"><img src="assets/voavoe-look-branco.png.PNG" alt="Modelo com look VOAVOE branco"><span class="campaign-caption">VOAVOE · Look branco</span></article>
+   <article class="campaign-card"><img src="assets/voavoe-look-preto.png.PNG" alt="Modelo com look VOAVOE preto"><span class="campaign-caption">VOAVOE · Look preto</span></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="produtos">
+ <div class="wrap">
+  <div class="kicker">Oferta especial</div>
+  <h2>Black Friday VOAVOE</h2>
+  <p class="intro">Escolha sua camiseta, selecione o tamanho e adicione ao carrinho. Disponível em P, M, G e GG.</p>
+  <div class="products" style="margin-top:30px">
+   <article class="product">
+    <img class="product-image" src="voavoe-camisetas-coloridas.png" alt="Camisetas VOAVOE coloridas">
+    <h3>Camisetas VOAVOE coloridas</h3><span class="old">R$ 199,90</span><span class="price">R$ 89,90</span>
+    <div class="chips"><span class="chip">Laranja</span><span class="chip">Terracota</span></div>
+    <label for="sizeColor" class="note">Selecione o tamanho</label><select class="size" id="sizeColor"><option>P</option><option>M</option><option>G</option><option>GG</option></select>
+    <button class="primary add" data-name="Camiseta VOAVOE colorida" data-price="89.90" data-size="sizeColor">ADICIONAR AO CARRINHO</button>
+   </article>
+   <article class="product">
+    <img class="product-image" src="voavoe-camisetas-pretas.png" alt="Camisetas VOAVOE pretas cristãs">
+    <h3>Camisetas VOAVOE cristãs</h3><span class="old">R$ 199,90</span><span class="price">R$ 89,90</span>
+    <div class="chips"><span class="chip">Preta</span><span class="chip">Estampa cristã</span></div>
+    <label for="sizeBlack" class="note">Selecione o tamanho</label><select class="size" id="sizeBlack"><option>P</option><option>M</option><option>G</option><option>GG</option></select>
+    <button class="primary add" data-name="Camiseta VOAVOE cristã" data-price="89.90" data-size="sizeBlack">ADICIONAR AO CARRINHO</button>
+   </article>
+  </div>
+  <p class="note">Oferta promocional sujeita à disponibilidade de estoque. Confirme entrega e formas de pagamento pelo WhatsApp.</p>
+ </div>
+</section>
+
+<section class="section" id="jaquetas">
+ <div class="wrap">
+  <div class="kicker">Seleção AVANCE</div><h2>Jaquetas em destaque</h2>
+  <div class="jackets">
+   <article class="jacket"><img src="jaqueta-preta.jpg" alt="Jaqueta puffer preta"><h3>Jaqueta Puffer preta</h3><span class="price">R$ 199,90</span></article>
+   <article class="jacket"><img src="jaqueta-verde.webp" alt="Jaqueta puffer verde"><h3>Jaqueta Puffer verde</h3><span class="price">R$ 199,90</span></article>
+   <article class="jacket"><img src="jaqueta-cinza.webp" alt="Jaqueta puffer cinza"><h3>Jaqueta Puffer cinza</h3><span class="price">R$ 199,90</span></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="perfumes">
+ <div class="wrap">
+  <div class="kicker">Fragrâncias selecionadas</div><h2>Perfumes</h2>
+  <div class="fragrance-grid">
+   <article class="fragrance"><img src="perfume-khamrah.jpg" alt="Lattafa Khamrah"><h3>Lattafa Khamrah</h3></article>
+   <article class="fragrance"><img src="perfume-afnan.jpg" alt="Linha Afnan"><h3>Linha Afnan</h3></article>
+   <article class="fragrance"><img src="perfume-asad-elixir.jpg" alt="Lattafa Asad Elixir"><h3>Lattafa Asad Elixir</h3></article>
+   <article class="fragrance"><img src="Asad bourbon 1.JPG" alt="Lattafa Asad Bourbon"><h3>Lattafa Asad Bourbon</h3></article>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contato">
+ <div class="wrap">
+  <div class="kicker">Atendimento AVANCE</div>
+  <h2>Seu próximo estilo<br>começa aqui.</h2>
+  <p>Gostou de alguma peça? Fale com nossa equipe, tire suas dúvidas e finalize seu pedido com atendimento direto.</p>
+  <div class="contact-links">
+   <a href="https://wa.me/5511940872423" target="_blank" rel="noopener">WHATSAPP ↗</a>
+   <a href="https://instagram.com/avanceimports" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+   <a href="mailto:avanceimportsoficial@gmail.com">E-MAIL ↗</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>© 2026 AVANCE IMPORTS · VOAVOE<br>avanceimportsoficial@gmail.com</footer>
+
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+ <div class="cart-box">
+  <button class="close" id="closeCart" aria-label="Fechar carrinho">×</button>
+  <h2>Seu carrinho</h2>
+  <div id="cartItems" class="empty">Seu carrinho está vazio.</div>
+  <div id="cartTotal"></div>
+  <button class="primary checkout" id="checkout">FINALIZAR PEDIDO NO WHATSAPP ↗</button>
+ </div>
+</div>
+
+<script>
+const WHATSAPP_NUMBER = "5511940872423";
+const cart = [];
+const panel = document.getElementById("cartPanel");
+const list = document.getElementById("cartItems");
+const count = document.getElementById("cartCount");
+const total = document.getElementById("cartTotal");
+
+function money(value){return value.toFixed(2).replace(".",",")}
+function openCart(){panel.classList.add("open");panel.setAttribute("aria-hidden","false");document.body.classList.add("lock")}
+function closeCart(){panel.classList.remove("open");panel.setAttribute("aria-hidden","true");document.body.classList.remove("lock")}
+function renderCart(){
+ count.textContent = cart.reduce((sum,item)=>sum+item.qty,0);
+ if(!cart.length){list.className="empty";list.textContent="Seu carrinho está vazio.";total.innerHTML="";return}
+ list.className="";
+ list.innerHTML=cart.map((item,index)=>`<div class="cart-item"><div><strong>${item.name}</strong><br>Tamanho: ${item.size}<br>Quantidade: ${item.qty}<br>R$ ${money(item.price*item.qty)}</div><button class="remove" data-remove="${index}">Remover</button></div>`).join("");
+ const subtotal=cart.reduce((sum,item)=>sum+item.price*item.qty,0);
+ total.innerHTML=`<h3>Total: R$ ${money(subtotal)}</h3>`;
+}
+document.querySelectorAll(".add").forEach(button=>{
+ button.addEventListener("click",()=>{
+  const size=document.getElementById(button.dataset.size).value;
+  const name=button.dataset.name;
+  const existing=cart.find(item=>item.name===name&&item.size===size);
+  if(existing)existing.qty++;else cart.push({name,size,price:Number(button.dataset.price),qty:1});
+  renderCart();openCart();
+ });
+});
+list.addEventListener("click",event=>{
+ const button=event.target.closest("[data-remove]");
+ if(!button)return;
+ cart.splice(Number(button.dataset.remove),1);renderCart();
+});
+document.getElementById("openCart").addEventListener("click",openCart);
+document.getElementById("closeCart").addEventListener("click",closeCart);
+panel.addEventListener("click",event=>{if(event.target===panel)closeCart()});
+document.addEventListener("keydown",event=>{if(event.key==="Escape")closeCart()});
+document.getElementById("checkout").addEventListener("click",()=>{
+ if(!cart.length){alert("Adicione um produto ao carrinho antes de finalizar.");return}
+ const lines=cart.map(item=>`• ${item.name} | tamanho ${item.size} | quantidade ${item.qty} | R$ ${money(item.price*item.qty)}`).join("\n");
+ const subtotal=cart.reduce((sum,item)=>sum+item.price*item.qty,0);
+ const message=`Olá! Vim pelo site da AVANCE IMPORTS e quero fazer um pedido VOAVOE:\n\n${lines}\n\nTotal estimado: R$ ${money(subtotal)}\n\nGostaria de confirmar disponibilidade, pagamento e entrega.`;
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank","noopener");
+});
+const menuButton=document.getElementById("menuButton");
+const mobileMenu=document.getElementById("mobileMenu");
+menuButton.addEventListener("click",()=>{mobileMenu.style.display=mobileMenu.style.display==="block"?"none":"block"});
+mobileMenu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>mobileMenu.style.display="none"));
+renderCart();
+</script>
+</body>
+</html>
